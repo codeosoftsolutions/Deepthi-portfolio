@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepthi Chowdary Gutlapalli — Managing Director</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --rg:#C4917A;--rg-l:#E8C4B4;--rg-d:#8A5E4E;
+  --slate:#1E2530;--slate2:#252D3A;--slate3:#2C3545;--slate4:#374051;
+  --text:#F0EBE5;--muted:#8E97A8;
+  --border:rgba(196,145,122,0.18);--border2:rgba(196,145,122,0.4);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--slate);color:var(--text);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3.5rem;background:rgba(30,37,48,0.92);backdrop-filter:blur(20px);border-bottom:0.5px solid var(--border);animation:fadeDown 1s ease forwards;}
+.logo{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:400;color:var(--rg);letter-spacing:0.15em;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:300;transition:color 0.3s;}
+.nav-links a:hover{color:var(--rg-l);}
+
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr 0.85fr;align-items:center;padding:7rem 3.5rem 4rem;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(196,145,122,0.08) 0%,transparent 70%);border-radius:50%;pointer-events:none;animation:breathe 6s ease-in-out infinite;}
+.hero-ring{position:absolute;right:-130px;top:50%;transform:translateY(-50%);width:580px;height:580px;border:0.5px solid var(--border);border-radius:50%;animation:pulse-r 5s ease-in-out infinite;}
+.hero-ring2{position:absolute;right:-230px;top:50%;transform:translateY(-50%);width:780px;height:780px;border:0.5px solid rgba(196,145,122,0.07);border-radius:50%;animation:pulse-r 7s ease-in-out 1.8s infinite;}
+
+@keyframes breathe{0%,100%{opacity:0.5;transform:translateY(-50%) scale(1);}50%{opacity:1;transform:translateY(-50%) scale(1.1);}}
+@keyframes pulse-r{0%,100%{opacity:0.5;transform:translateY(-50%) scale(1);}50%{opacity:0.15;transform:translateY(-50%) scale(1.04);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes shimmer{0%{background-position:200% center;}100%{background-position:-200% center;}}
+
+.hero-content{position:relative;z-index:1;}
+.eyebrow{font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--rg);margin-bottom:1.25rem;font-weight:400;display:flex;align-items:center;gap:0.85rem;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
+.eyebrow::before{content:'';display:block;width:34px;height:0.5px;background:linear-gradient(to right,transparent,var(--rg));}
+h1{font-family:'Cormorant',serif;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:300;line-height:1.08;opacity:0;animation:fadeUp 0.9s ease 0.4s forwards;margin-bottom:0.4rem;}
+h1 em{font-style:italic;font-weight:300;background:linear-gradient(135deg,var(--rg-l),var(--rg),var(--rg-d),var(--rg-l));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear infinite;}
+.subtitle{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.75rem;font-weight:300;opacity:0;animation:fadeUp 0.9s ease 0.6s forwards;}
+.hero-desc{font-size:0.9rem;line-height:1.9;color:rgba(240,235,229,0.55);max-width:440px;margin-bottom:2.25rem;font-weight:300;opacity:0;animation:fadeUp 0.9s ease 0.8s forwards;}
+.hero-btns{display:flex;gap:1rem;opacity:0;animation:fadeUp 0.9s ease 1s forwards;}
+.btn{padding:0.82rem 1.8rem;border:0.5px solid var(--rg);color:var(--rg);background:transparent;font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all 0.35s;position:relative;overflow:hidden;font-weight:300;}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--rg-d),var(--rg));transform:translateX(-101%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);}
+.btn:hover::before{transform:translateX(0);}
+.btn:hover{color:var(--slate);}
+.btn span{position:relative;z-index:1;}
+
+.hero-visual{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeIn 1.2s ease 0.5s forwards;position:relative;}
+.portrait-wrap{position:relative;width:320px;}
+.portrait-wrap::before{content:'';position:absolute;inset:-18px;border:0.5px solid var(--border2);border-radius:2px;animation:spin 24s linear infinite;z-index:0;}
+.portrait-wrap::after{content:'';position:absolute;inset:-34px;border:0.5px solid var(--border);border-radius:2px;animation:spin 36s linear infinite reverse;z-index:0;}
+.portrait-svg-wrap{position:relative;z-index:1;border:0.5px solid var(--border2);overflow:hidden;background:linear-gradient(160deg,var(--slate3),var(--slate2));}
+.portrait-svg-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--rg),transparent);z-index:2;}
+.portrait-svg-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to top,rgba(196,145,122,0.1),transparent);z-index:2;pointer-events:none;}
+.portrait-name-tag{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:3;background:rgba(30,37,48,0.88);border:0.5px solid var(--border2);padding:0.55rem 1.2rem;text-align:center;backdrop-filter:blur(8px);white-space:nowrap;}
+.portrait-name-tag .pn{font-family:'Cormorant',serif;font-size:0.9rem;font-weight:400;color:var(--rg-l);letter-spacing:0.08em;}
+.portrait-name-tag .pr{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:0.1rem;}
+.badge{position:absolute;z-index:4;background:var(--slate3);border:0.5px solid var(--border2);padding:0.7rem 0.9rem;animation:float 4s ease-in-out infinite;}
+.badge:nth-child(1){top:-0.5rem;right:-3rem;animation-delay:0s;}
+.badge:nth-child(2){bottom:3.5rem;left:-3rem;animation-delay:2s;}
+.badge::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--rg),transparent);}
+.badge-n{font-family:'Cormorant',serif;font-size:1.3rem;color:var(--rg-l);line-height:1;}
+.badge-l{font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:300;}
+@keyframes hairwave{0%,100%{d:path('M 60 110 Q 80 95 100 105 Q 140 120 160 100 Q 190 75 220 90 Q 240 100 260 85');}50%{d:path('M 60 110 Q 85 90 105 108 Q 145 125 162 98 Q 192 70 222 88 Q 242 98 262 82');}}
+
+/* STATS */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);margin:0 3.5rem;background:var(--slate2);}
+.s{padding:2rem 1.75rem;border-right:0.5px solid var(--border);opacity:0;transform:translateY(16px);transition:opacity 0.6s,transform 0.6s;}
+.s:last-child{border-right:none;}
+.s.vis{opacity:1;transform:translateY(0);}
+.sn{font-family:'Cormorant',serif;font-size:2.4rem;font-weight:300;line-height:1;background:linear-gradient(135deg,var(--rg-l),var(--rg));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sl{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.35rem;font-weight:300;}
+
+/* SECTIONS */
+section{padding:5rem 3.5rem;}
+.sec-label{font-size:0.58rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--rg);margin-bottom:0.75rem;font-weight:400;}
+.sec-title{font-family:'Cormorant',serif;font-size:clamp(1.8rem,3.2vw,2.7rem);font-weight:300;line-height:1.18;margin-bottom:2.5rem;}
+.sec-title em{font-style:italic;background:linear-gradient(135deg,var(--rg-l),var(--rg));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.edu-card{background:var(--slate2);border:0.5px solid var(--border);padding:2rem;position:relative;overflow:hidden;transition:background 0.35s,border-color 0.35s;}
+.edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--rg),transparent);transform:scaleX(0);transform-origin:center;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.edu-card:hover{background:var(--slate3);border-color:var(--border2);}
+.edu-card:hover::before{transform:scaleX(1);}
+.edu-level{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rg);margin-bottom:0.6rem;font-weight:400;}
+.edu-name{font-family:'Cormorant',serif;font-size:1.15rem;font-weight:400;line-height:1.3;margin-bottom:0.4rem;color:var(--text);}
+.edu-sub{font-size:0.72rem;color:var(--muted);font-weight:300;}
+
+/* EXPERTISE */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);}
+.ec{background:var(--slate);padding:2.25rem;position:relative;overflow:hidden;transition:background 0.4s;cursor:default;}
+.ec::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(to right,transparent,var(--rg),transparent);transform:scaleX(0);transform-origin:center;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.ec:hover{background:var(--slate3);}
+.ec:hover::after{transform:scaleX(1);}
+.ec-num{font-family:'Cormorant',serif;font-size:1.4rem;color:var(--rg-d);margin-bottom:1rem;transition:color 0.3s;}
+.ec:hover .ec-num{color:var(--rg);}
+.ec-title{font-size:0.85rem;font-weight:400;margin-bottom:0.6rem;}
+.ec-desc{font-size:0.75rem;line-height:1.75;color:var(--muted);font-weight:300;}
+
+/* TIMELINE */
+.tl{max-width:720px;}
+.ti{display:grid;grid-template-columns:130px 1fr;gap:1.75rem;margin-bottom:2.75rem;opacity:0;transform:translateX(-18px);transition:opacity 0.6s,transform 0.6s;}
+.ti.vis{opacity:1;transform:translateX(0);}
+.ty{font-family:'Cormorant',serif;font-size:0.95rem;font-weight:300;color:var(--rg);text-align:right;padding-top:0.2rem;line-height:1.4;}
+.tb{border-left:0.5px solid var(--border2);padding-left:1.75rem;position:relative;}
+.tb::before{content:'';position:absolute;left:-4px;top:8px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--rg-l),var(--rg));box-shadow:0 0 8px rgba(196,145,122,0.4);}
+.tr{font-size:0.92rem;font-weight:400;margin-bottom:0.2rem;}
+.tc{font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--rg-d);margin-bottom:0.5rem;font-weight:400;}
+.td{font-size:0.76rem;line-height:1.75;color:var(--muted);font-weight:300;}
+.t-tag{display:inline-block;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(196,145,122,0.1);border:0.5px solid var(--border2);color:var(--rg);padding:0.2rem 0.65rem;margin-top:0.65rem;}
+
+/* QUOTE */
+.quote-sec{background:var(--slate2);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);text-align:center;padding:5rem 3.5rem;position:relative;overflow:hidden;}
+.quote-sec::before{content:'\201C';font-family:'Cormorant',serif;font-size:18rem;font-weight:300;color:rgba(196,145,122,0.04);position:absolute;top:-4rem;left:3rem;line-height:1;pointer-events:none;}
+.big-q{font-family:'Cormorant',serif;font-size:clamp(1.3rem,2.4vw,1.85rem);font-style:italic;font-weight:300;line-height:1.6;max-width:740px;margin:0 auto 1.5rem;color:rgba(240,235,229,0.85);opacity:0;transform:translateY(18px);transition:opacity 0.8s,transform 0.8s;position:relative;z-index:1;}
+.big-q.vis{opacity:1;transform:translateY(0);}
+.qa{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--rg);font-weight:400;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
+.ci{display:flex;gap:0.85rem;align-items:flex-start;padding:1.1rem 0;border-bottom:0.5px solid var(--border);}
+.cd{width:5px;height:5px;border-radius:50%;background:linear-gradient(135deg,var(--rg-l),var(--rg));margin-top:0.38rem;flex-shrink:0;}
+.ck{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:0.18rem;font-weight:300;}
+.cv{font-size:0.84rem;color:var(--text);font-weight:300;}
+.cf{display:flex;flex-direction:column;gap:1.1rem;}
+.cf input,.cf textarea{width:100%;background:transparent;border:none;border-bottom:0.5px solid var(--border);color:var(--text);font-family:'Jost',sans-serif;font-size:0.82rem;padding:0.7rem 0;outline:none;transition:border-color 0.3s;resize:none;font-weight:300;}
+.cf input:focus,.cf textarea:focus{border-color:var(--rg);}
+.cf input::placeholder,.cf textarea::placeholder{color:var(--muted);font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;}
+
+footer{padding:1.5rem 3.5rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--slate2);}
+.fc{font-size:0.6rem;color:var(--muted);letter-spacing:0.08em;font-weight:300;}
+.fl{font-family:'Cormorant',serif;font-size:1rem;color:var(--rg);font-weight:300;letter-spacing:0.1em;}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;gap:2.5rem;}
+  .hero-visual{display:flex;justify-content:center;margin-top:0;}
+  .portrait-wrap{width:240px;}
+  .portrait-wrap::before{inset:-12px;}
+  .portrait-wrap::after{inset:-22px;}
+  .portrait-svg-wrap svg{width:240px;}
+  .portrait-name-tag .pn{font-size:0.75rem;}
+  .portrait-name-tag .pr{font-size:0.48rem;}
+  .badge:nth-child(1){top:-0.5rem;right:-1.5rem;}
+  .badge:nth-child(2){bottom:3rem;left:-1.5rem;}
+  .badge-n{font-size:1rem;}
+  .badge-l{font-size:0.48rem;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);margin:0 1.5rem;}
+  .exp-grid,.edu-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  nav{padding:1rem 1.5rem;}
+  .nav-links{gap:1.2rem;}
+  .nav-links a{font-size:0.6rem;}
+  section{padding:4rem 1.5rem;}
+  .ti{grid-template-columns:80px 1fr;}
+  .quote-sec{padding:3.5rem 1.5rem;}
+  h1{font-size:clamp(2rem,8vw,3rem);}
+}
+.btn {
+      align-self: flex-start;
+      border: 1px solid #25D366;
+      color: #25D366;
+      background: transparent;
+      font-family: inherit;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn:hover { background: #25D366; color: #1e2535; }
+
+    .wa-icon {
+      width: 16px; height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .cf-status {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: none;
+      color: #25D366;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">D · C · G</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Journey</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-glow"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring2"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Managing Director</div>
+    <h1>Deepthi Chowdary<br><em>Gutalpalli</em></h1>
+    <div class="subtitle">Codeosoft Solutions &nbsp;·&nbsp; 2026</div>
+    <p class="hero-desc">A driven tech professional who rose from Automation Engineering to Managing Director — blending engineering precision with visionary leadership to build innovative software solutions.</p>
+    <div class="hero-btns">
+      <button class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})"><span>Get in Touch</span></button>
+      <button class="btn" onclick="document.querySelector('#experience').scrollIntoView({behavior:'smooth'})"><span>View Journey</span></button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="portrait-wrap">
+      <div class="badge"><div class="badge-n">3+</div><div class="badge-l">Yrs Experience</div></div>
+      <div class="badge"><div class="badge-n">MD</div><div class="badge-l">Codeosoft 2026</div></div>
+      <div class="portrait-svg-wrap">
+            <img viewBox="0 0 320 440" src="./IMG_2650.JPG.jpeg" width="320" style="display:block;"/>
+          <defs>
+            <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#2C3545"/>
+              <stop offset="100%" stop-color="#1E2530"/>
+            </radialGradient>
+            <radialGradient id="skinGrad" cx="50%" cy="40%" r="55%">
+              <stop offset="0%" stop-color="#C4836A"/>
+              <stop offset="100%" stop-color="#A0614C"/>
+            </radialGradient>
+            <radialGradient id="faceGrad" cx="50%" cy="38%" r="52%">
+              <stop offset="0%" stop-color="#D4957C"/>
+              <stop offset="100%" stop-color="#B5705A"/>
+            </radialGradient>
+            <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#2A3240"/>
+              <stop offset="100%" stop-color="#1A2030"/>
+            </linearGradient>
+            <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1A1008"/>
+              <stop offset="100%" stop-color="#2D1E0F"/>
+            </linearGradient>
+            <linearGradient id="shineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="rgba(196,145,122,0.15)"/>
+              <stop offset="100%" stop-color="rgba(196,145,122,0)"/>
+            </linearGradient>
+            <filter id="softBlur">
+              <feGaussianBlur stdDeviation="1.2"/>
+            </filter>
+            <filter id="subtleShadow">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.4)"/>
+            </filter>
+            <clipPath id="portraitClip">
+              <rect width="320" height="440"/>
+            </clipPath>
+          </defs>
+
+          <g clip-path="url(#portraitClip)">
+            <!-- Background -->
+            <rect width="320" height="440" fill="url(#bgGrad)"/>
+
+            <!-- Subtle grid lines -->
+            <line x1="0" y1="220" x2="320" y2="220" stroke="rgba(196,145,122,0.04)" stroke-width="0.5"/>
+            <line x1="160" y1="0" x2="160" y2="440" stroke="rgba(196,145,122,0.04)" stroke-width="0.5"/>
+
+            <!-- Body / Blazer -->
+            <ellipse cx="160" cy="520" rx="130" ry="140" fill="url(#suitGrad)" filter="url(#subtleShadow)"/>
+            <!-- Collar / lapels -->
+            <path d="M 130 310 L 155 360 L 160 355 L 165 360 L 190 310 Q 160 330 130 310Z" fill="#1A2030"/>
+            <path d="M 130 310 L 150 290 L 160 310 L 170 290 L 190 310 Q 160 330 130 310Z" fill="#232C3C"/>
+            <!-- Shirt underneath -->
+            <path d="M 148 295 L 155 360 L 165 360 L 172 295 Q 160 310 148 295Z" fill="#E8DDD5"/>
+            <!-- Blazer highlight -->
+            <path d="M 90 380 Q 110 340 130 310 Q 145 350 160 355 Q 175 350 190 310 Q 210 340 230 380 Q 240 400 240 440 L 80 440 Q 80 400 90 380Z" fill="url(#suitGrad)"/>
+            <path d="M 90 380 Q 100 350 115 330" stroke="rgba(196,145,122,0.12)" stroke-width="1" fill="none"/>
+            <path d="M 230 380 Q 220 350 205 330" stroke="rgba(196,145,122,0.12)" stroke-width="1" fill="none"/>
+
+            <!-- Neck -->
+            <rect x="147" y="270" width="26" height="35" rx="8" fill="url(#skinGrad)"/>
+
+            <!-- Head shape -->
+            <ellipse cx="160" cy="200" rx="62" ry="75" fill="url(#faceGrad)" filter="url(#subtleShadow)"/>
+
+            <!-- Hair — back layer -->
+            <ellipse cx="160" cy="175" rx="66" ry="72" fill="url(#hairGrad)"/>
+            <!-- Long hair sides -->
+            <path d="M 98 195 Q 82 230 85 280 Q 88 310 95 330 Q 115 300 118 270 Q 112 235 115 200Z" fill="url(#hairGrad)"/>
+            <path d="M 222 195 Q 238 230 235 280 Q 232 310 225 330 Q 205 300 202 270 Q 208 235 205 200Z" fill="url(#hairGrad)"/>
+
+            <!-- Face -->
+            <ellipse cx="160" cy="205" rx="58" ry="68" fill="url(#faceGrad)"/>
+
+            <!-- Face shading / contour -->
+            <ellipse cx="130" cy="215" rx="18" ry="22" fill="rgba(0,0,0,0.06)" filter="url(#softBlur)"/>
+            <ellipse cx="190" cy="215" rx="18" ry="22" fill="rgba(0,0,0,0.06)" filter="url(#softBlur)"/>
+
+            <!-- Eyebrows -->
+            <path d="M 132 180 Q 143 175 152 178" stroke="#2D1E0F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M 168 178 Q 177 175 188 180" stroke="#2D1E0F" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+            <!-- Eyes -->
+            <!-- Left eye -->
+            <ellipse cx="142" cy="195" rx="13" ry="8" fill="white"/>
+            <ellipse cx="142" cy="196" rx="8" ry="7" fill="#3D2B1F"/>
+            <ellipse cx="142" cy="196" rx="5" ry="5" fill="#1A0F08"/>
+            <ellipse cx="145" cy="193" rx="2" ry="2" fill="white" opacity="0.7"/>
+            <!-- Left lashes -->
+            <path d="M 129 192 Q 133 186 138 188" stroke="#1A0F08" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <path d="M 155 192 Q 152 186 148 188" stroke="#1A0F08" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+            <!-- Right eye -->
+            <ellipse cx="178" cy="195" rx="13" ry="8" fill="white"/>
+            <ellipse cx="178" cy="196" rx="8" ry="7" fill="#3D2B1F"/>
+            <ellipse cx="178" cy="196" rx="5" ry="5" fill="#1A0F08"/>
+            <ellipse cx="181" cy="193" rx="2" ry="2" fill="white" opacity="0.7"/>
+            <!-- Right lashes -->
+            <path d="M 165 192 Q 168 186 173 188" stroke="#1A0F08" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <path d="M 191 192 Q 188 186 184 188" stroke="#1A0F08" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+            <!-- Nose -->
+            <path d="M 160 200 Q 154 218 152 225 Q 160 230 168 225 Q 166 218 160 200Z" fill="rgba(0,0,0,0.07)" filter="url(#softBlur)"/>
+            <path d="M 152 225 Q 156 228 160 227 Q 164 228 168 225" stroke="rgba(100,55,40,0.4)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+            <!-- Lips -->
+            <path d="M 147 238 Q 153 234 160 235 Q 167 234 173 238 Q 167 242 160 242 Q 153 242 147 238Z" fill="#B5604A"/>
+            <path d="M 147 238 Q 153 243 160 243 Q 167 243 173 238" fill="#A04535"/>
+            <path d="M 150 237 Q 155 234 160 235 Q 165 234 170 237" stroke="rgba(255,200,180,0.3)" stroke-width="0.8" fill="none"/>
+
+            <!-- Cheek blush -->
+            <ellipse cx="128" cy="218" rx="14" ry="9" fill="rgba(196,100,80,0.12)" filter="url(#softBlur)"/>
+            <ellipse cx="192" cy="218" rx="14" ry="9" fill="rgba(196,100,80,0.12)" filter="url(#softBlur)"/>
+
+            <!-- Hair — front layer with parting -->
+            <path d="M 100 155 Q 115 125 140 118 Q 155 112 160 115 Q 165 112 180 118 Q 205 125 220 155 Q 210 140 195 138 Q 175 132 165 140 Q 162 143 160 143 Q 158 143 155 140 Q 145 132 125 138 Q 110 140 100 155Z" fill="url(#hairGrad)"/>
+            <!-- Hair parting highlight -->
+            <path d="M 158 115 Q 160 110 162 115" stroke="rgba(255,200,150,0.15)" stroke-width="1" fill="none"/>
+            <!-- Hair flow lines -->
+            <path d="M 105 160 Q 112 145 125 140" stroke="rgba(255,200,150,0.08)" stroke-width="1" fill="none"/>
+            <path d="M 215 160 Q 208 145 195 140" stroke="rgba(255,200,150,0.08)" stroke-width="1" fill="none"/>
+
+            <!-- Ear -->
+            <ellipse cx="100" cy="208" rx="8" ry="12" fill="#B5705A"/>
+            <ellipse cx="220" cy="208" rx="8" ry="12" fill="#B5705A"/>
+            <!-- Earring left -->
+            <circle cx="100" cy="218" r="3" fill="none" stroke="#C4917A" stroke-width="1.2"/>
+            <circle cx="100" cy="224" r="2" fill="#C4917A" opacity="0.8"/>
+            <!-- Earring right -->
+            <circle cx="220" cy="218" r="3" fill="none" stroke="#C4917A" stroke-width="1.2"/>
+            <circle cx="220" cy="224" r="2" fill="#C4917A" opacity="0.8"/>
+
+            <!-- Suit collar detail -->
+            <path d="M 135 308 L 152 285 L 160 308" stroke="rgba(196,145,122,0.2)" stroke-width="0.8" fill="none"/>
+            <path d="M 185 308 L 168 285 L 160 308" stroke="rgba(196,145,122,0.2)" stroke-width="0.8" fill="none"/>
+
+            <!-- Shine overlay top -->
+            <rect width="320" height="440" fill="url(#shineGrad)" opacity="0.5"/>
+
+            <!-- Rose gold bottom glow -->
+            <ellipse cx="160" cy="440" rx="160" ry="60" fill="rgba(196,145,122,0.08)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="portrait-name-tag">
+        <div class="pn">Deepthi Chowdary Gutlapalli</div>
+        <div class="pr">Managing Director · Codeosoft Solutions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="s"><div class="sn" data-t="3">0</div><div class="sl">Years in Tech</div></div>
+  <div class="s"><div class="sn" data-t="3">0</div><div class="sl">Companies</div></div>
+  <div class="s"><div class="sn" data-t="2">0</div><div class="sl">Engineering Roles</div></div>
+  <div class="s"><div class="sn" data-t="1">0</div><div class="sl">Director Position</div></div>
+</div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-label">Academic Background</div>
+  <h2 class="sec-title">Foundation of <em>Knowledge</em></h2>
+  <div class="edu-grid">
+     <div class="edu-card">
+      <div class="edu-level">B.Tech</div>
+      <div class="edu-name">Aditya College of Engineering &amp; Technology</div>
+      <div class="edu-sub">Bachelor of Technology</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-level">Intermediate</div>
+      <div class="edu-name">Sri Chaitanya Jr. College</div>
+      <div class="edu-sub">Higher Secondary Education</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-level">Schooling</div>
+      <div class="edu-name">Sri Sahajanandh School</div>
+      <div class="edu-sub">Secondary Education</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise" style="background:var(--slate2);border-top:0.5px solid var(--border);">
+  <div class="sec-label">Core Competencies</div>
+  <h2 class="sec-title">Domains of <em>Excellence</em></h2>
+  <div class="exp-grid">
+    <div class="ec"><div class="ec-num">I.</div><div class="ec-title">Automation Engineering</div><p class="ec-desc">Designing and deploying industrial automation systems with precision, driving efficiency and operational excellence.</p></div>
+    <div class="ec"><div class="ec-num">II.</div><div class="ec-title">Web Development</div><p class="ec-desc">Building responsive, performant web applications with modern frameworks and clean, scalable architecture.</p></div>
+    <div class="ec"><div class="ec-num">III.</div><div class="ec-title">Strategic Leadership</div><p class="ec-desc">Directing teams and business operations as Managing Director, aligning technology vision with company growth.</p></div>
+    <div class="ec"><div class="ec-num">IV.</div><div class="ec-title">Software Solutions</div><p class="ec-desc">Delivering end-to-end software products that solve real-world problems with elegant, robust engineering.</p></div>
+    <div class="ec"><div class="ec-num">V.</div><div class="ec-title">Product Management</div><p class="ec-desc">Overseeing product lifecycle from concept to deployment, ensuring quality and market-fit at every stage.</p></div>
+    <div class="ec"><div class="ec-num">VI.</div><div class="ec-title">Team Building</div><p class="ec-desc">Recruiting, mentoring and growing high-performance engineering and product teams with purpose-driven culture.</p></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE TIMELINE -->
+<section id="experience">
+  <div class="sec-label">Career Journey</div>
+  <h2 class="sec-title">A Rising Track Record of <em>Impact</em></h2>
+  <div class="tl">
+
+    <div class="ti">
+      <div class="ty">2026<br>Present</div>
+      <div class="tb">
+        <div class="tr">Managing Director</div>
+        <div class="tc">Codeosoft Solutions</div>
+        <p class="td">Leading Codeosoft Solutions as Managing Director — driving the company's strategic vision, overseeing product and engineering teams, and establishing the organisation as a trusted software solutions partner.</p>
+        <span class="t-tag">Leadership</span>
+      </div>
+    </div>
+
+    <div class="ti">
+      <div class="ty">2024<br>6 Months</div>
+      <div class="tb">
+        <div class="tr">Web Developer</div>
+        <div class="tc">Electronic Arts</div>
+        <p class="td">Developed and maintained web-facing features at one of the world's leading gaming companies. Contributed to frontend architecture, performance optimisation, and cross-functional collaboration with product teams.</p>
+        <span class="t-tag">Web Development</span>
+      </div>
+    </div>
+
+    <div class="ti">
+      <div class="ty">2023<br>1 Year</div>
+      <div class="tb">
+        <div class="tr">Automachine Engineer</div>
+        <div class="tc">Schneider Electric</div>
+        <p class="td">Designed and implemented Automachine systems at Schneider Electric, a global leader in energy management. Worked on PLC programming, system integration, and delivering reliable industrial automation solutions.</p>
+        <span class="t-tag">Automachine</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-sec">
+  <p class="big-q">"Every line of code, every system I have built, every team I have led — it has all been in pursuit of one thing: creating technology that truly makes a difference."</p>
+  <div class="qa">Deepthi Chowdary Gutalpalli &nbsp;·&nbsp; Managing Director, Codeosoft Solutions</div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-label">Let's Connect</div>
+  <h2 class="sec-title">Open to <em>Opportunities</em></h2>
+  <div class="contact-grid">
+    <div>
+      <div class="ci"><div class="cd"></div><div><div class="ck">Company</div><div class="cv">Codeosoft Solutions</div></div></div>
+      <div class="ci"><div class="cd"></div><div><div class="ck">Role</div><div class="cv">Managing Director</div></div></div>
+      <div class="ci"><div class="cd"></div><div><div class="ck">Education</div><div class="cv">B.Tech — Aditya College of Eng &amp; Tech</div></div></div>
+      <div class="ci"><div class="cd"></div><div><div class="ck">LinkedIn</div><div class="cv"><a href="https://www.linkedin.com/in/deepthi-gutlapalli-3406a6233/" style="color: white; text-decoration: none;">linkedin.com/in/deepthi-gutlapalli</a></div></div></div>
+    </div>
+    <div class="cf" id="cf">
+
+    <div class="underline-wrap">
+      <input type="text" id="cf-name" placeholder="Your Name">
+      <div class="uline"></div>
+    </div>
+
+    <div class="underline-wrap">
+      <input type="email" id="cf-email" placeholder="Email Address">
+      <div class="uline"></div>
+    </div>
+
+    <div class="underline-wrap">
+      <input type="text" id="cf-org" placeholder="Organisation">
+      <div class="uline"></div>
+    </div>
+
+    <div class="underline-wrap">
+      <textarea rows="4" id="cf-msg" placeholder="Your Message"></textarea>
+      <div class="uline"></div>
+    </div>
+
+    <button class="btn" id="cf-btn" style="align-self:flex-start">
+      <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span>Send on WhatsApp</span>
+    </button>
+
+    <p class="cf-status" id="cf-status"></p>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = "919247542054";
+
+    document.getElementById('cf-btn').addEventListener('click', function () {
+      const name  = document.getElementById('cf-name').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const org   = document.getElementById('cf-org').value.trim();
+      const msg   = document.getElementById('cf-msg').value.trim();
+      const status = document.getElementById('cf-status');
+
+      if (!name || !email || !msg) {
+        status.textContent = 'Please fill in Name, Email and Message.';
+        status.style.color = '#e07a7a';
+        status.style.display = 'block';
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        status.textContent = 'Please enter a valid email address.';
+        status.style.color = '#e07a7a';
+        status.style.display = 'block';
+        return;
+      }
+
+      const text = [
+        `Hi! I contacted you via your portfolio.`,
+        ``,
+        `*Name:* ${name}`,
+        `*Email:* ${email}`,
+        org ? `*Organisation:* ${org}` : null,
+        ``,
+        `*Message:*`,
+        msg
+      ].filter(line => line !== null).join('\n');
+
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+
+      status.textContent = 'Opening WhatsApp — thank you!';
+      status.style.color = '#25D366';
+      status.style.display = 'block';
+
+      ['cf-name','cf-email','cf-org','cf-msg'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    });
+  </script>
+
+  </div>
+</section>
+
+<footer>
+  <div class="fc">© 2026 Deepthi Chowdary Gutalpalli. All rights reserved.</div>
+  <div class="fl">DCG</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(e => {
+    e.forEach(x => { if (x.isIntersecting) x.target.classList.add('vis'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.s, .ti, .big-q').forEach(el => io.observe(el));
+
+  const co = new IntersectionObserver(e => {
+    e.forEach(x => {
+      if (x.isIntersecting) {
+        document.querySelectorAll('[data-t]').forEach(el => {
+          const target = +el.getAttribute('data-t');
+          let current = 0, inc = Math.max(target / 40, 0.05);
+          const sl = el.closest('.s').querySelector('.sl').textContent;
+          const timer = setInterval(() => {
+            current += inc;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = Math.round(current) + (sl.includes('Years') ? '+' : '');
+          }, 40);
+        });
+        co.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  const fs = document.querySelector('.s');
+  if (fs) co.observe(fs);
+</script>
+</body>
+</html>
